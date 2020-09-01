@@ -1,0 +1,49 @@
+<!-- <div class="container">
+    <input #input type="text" (keyup.enter)="addBook(input)">
+    <button class="button-send" (click)="addBook(input)">Send</button>
+</div> -->
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<form [formGroup]='addBookForm' (ngSubmit)="addBook()">
+    <!-- <input type="text" class="input-text" [ngClass]="name.touched && name.invalid ? 'input-text__inavlid':''" name="name" [(ngModel)]="name" placeholder="name" required> -->
+
+
+
+
+
+
+    <input type="text" class="input-text" [ngClass]="name.touched && name.invalid ? 'input-text__inavlid' : ''" placeholder="name" formControlName="name" />
+    <div *ngIf="name.touched && name.invalid" class="invalid-message">
+        You must enter yours username
+    </div>
+    <input type="text" class="input-text" [ngClass]="author.touched && author.invalid ? 'input-text__inavlid':''" name="author" formControlName="author" placeholder="author" required>
+    <div *ngIf="author.touched && author.invalid" class="invalid-message">
+        You must enter yours username
+    </div>
+
+    <input type="text" class="input-text" [ngClass]="publicationYear.touched && publicationYear.invalid ? 'input-text__inavlid':''" name="publicationYear" formControlName="publicationYear" placeholder="publicationYear" required>
+    <div *ngIf="publicationYear.touched && publicationYear.invalid" class="invalid-message">
+        You must enter yours username
+    </div>
+
+    <input type="number" class="input-text" [ngClass]="price.touched && price.invalid ? 'input-text__inavlid':''" name="price" formControlName="price" placeholder="price" required>
+    <div *ngIf="publicationYear.touched && publicationYear.invalid" class="invalid-message">
+        You must enter yours username
+    </div>
+    <div class="nav-container">
+        <button type="submit" class="button-submit" [disabled]="addBookForm.invalid">
+      Submit
+    </button>
+    </div>
+</form>

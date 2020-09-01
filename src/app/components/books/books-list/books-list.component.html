@@ -1,0 +1,20 @@
+<!-- <p>books-list works!</p>
+<app-add-book (newBook)="addBook($event)">
+</app-add-book>
+<div *ngFor="let book of books">
+    <app-book>
+        {{book.name}} {{book.author}} {{book.publicationYear}} {{book.price}} 66
+    </app-book>
+</div> -->
+
+<!-- <div class="row">   -->
+<!-- <div class="col-xs-12">
+        <button class="btn btn-success">New book</button>
+    </div> -->
+<!-- </div> -->
+<!-- <hr> -->
+<div class="row">
+    <div class="col-xs-12">
+        <app-book *ngFor="let bookEl of books" [book]="bookEl"></app-book>
+    </div>
+</div>

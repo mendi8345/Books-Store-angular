@@ -1,0 +1,18 @@
+<!-- <div>
+    <ng-content></ng-content>
+</div> -->
+
+<a class="list-group-item clearfix" (click)="onSelected()">
+    <span class="pull-right">
+    <img
+      [src]="book.imagePath"
+      alt="{{ book.title }}"
+      class="img-responsive"
+      style="max-height: 500px;">
+  </span>
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">{{ book.title }}</h4>
+        <p class="list-group-item-text">{{ book.authors }}</p>
+    </div>
+
+</a>

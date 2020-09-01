@@ -1,0 +1,16 @@
+    .delete {
+        font-weight: 1000;
+        /* position: absolute;*/
+        top: 0;
+        right: 0.5rem;
+        /* background-color: ; */
+    }
+    
+    .delete:hover {
+        color: crimson;
+        cursor: pointer;
+    }
+    
+    .cursor-pointer {
+        cursor: pointer;
+    }

@@ -1,0 +1,66 @@
+<!-- <div class="container-lg">
+    <div *ngIf="books; else infoText">
+
+        <ng-template #infoText>
+            <p>no books yet!</p>
+        </ng-template>
+
+        <table>
+
+            <tr>
+                <th>book </th>
+                <th>price</th>
+
+            </tr>
+            <tr>
+                <td>
+                    <div *ngFor="let book of books">
+                        {{book.name}}
+                    </div>
+                </td>
+
+                <td>
+                    <div *ngFor="let book of books">
+                        {{book.price}}
+                    </div>
+                </td>
+            </tr>
+
+
+
+        </table>
+    </div>
+</div> -->
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">name</th>
+            <th scope="col">img</th>
+            <th scope="col">author</th>
+            <th scope="col">publication year</th>
+            <th scope="col">price</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let book of books; let i = index">
+            <td class="cursor-pointer delete" (click)="onClickDelete(i)">
+                🗑
+            </td>
+            <!-- <th scope="row">1</th> -->
+            <td>{{book.title}}</td>
+            <td> <img [src]="book.imagePath" alt="{{ book.title }}" class="img-responsive" style="max-height: 50px;"></td>
+
+            <td>{{book.authors}}</td>
+            <td>{{book.publishedDate}}</td>
+            <td>{{book.price}}</td>
+
+        </tr>
+
+    </tbody>
+</table>
+<div class="btn btn-info">Total {{totalPrice}} ₪</div>

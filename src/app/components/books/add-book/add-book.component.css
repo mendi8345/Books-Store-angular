@@ -1,0 +1,54 @@
+:host {
+    margin-top: 30rem;
+    width: 50%;
+    background: cornflowerblue;
+}
+
+.headline {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.input-text {
+    width: 50%;
+    padding: 0.5rem;
+    border: 1px solid #cc0da3;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.input-text__inavlid {
+    border: 1px solid #d90429;
+}
+
+.button-submit {
+    display: block;
+    padding: 0.5rem;
+    color: white;
+    background: #cc0da3;
+    border: none;
+    border-radius: 5px;
+}
+
+.button-submit:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.nav-container {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    font-size: 0.75rem;
+    align-self: flex-end;
+}
+
+.invalid-message {
+    color: #d90429;
+    font-size: 0.75rem;
+}
